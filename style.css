@@ -1,0 +1,34 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+body{background:#f8fafc;text-align:center;padding:30px 15px;}
+h1{margin-bottom:20px;color:#0f172a;}
+
+/* Toggle */
+.toggle-container{display:flex;justify-content:center;align-items:center;gap:10px;margin:20px 0;}
+.switch{position:relative;display:inline-block;width:50px;height:26px;}
+.switch input{display:none;}
+.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#cbd5e1;border-radius:20px;transition:0.3s;}
+.slider:before{content:"";position:absolute;height:20px;width:20px;left:3px;bottom:3px;background:white;border-radius:50%;transition:0.3s;}
+input:checked + .slider{background:#0ea5e9;}
+input:checked + .slider:before{transform:translateX(24px);}
+
+/* Filter Buttons */
+.filter-container{margin:20px 0;}
+.filter-btn{padding:8px 18px;margin:0 5px;border:1px solid #0ea5e9;background:white;color:#0ea5e9;border-radius:20px;cursor:pointer;transition:0.3s;}
+.filter-btn.active, .filter-btn:hover{background:#0ea5e9;color:white;transform:scale(1.05);}
+
+/* Cards */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1000px;margin:30px auto;}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08);position:relative;transition:0.3s;text-align:left;}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,0,0,0.15);border:1px solid #0ea5e9;}
+.card h3{font-size:22px;margin-bottom:5px;}
+.desc{color:#64748b;font-size:14px;margin-bottom:15px;}
+.price{font-size:32px;margin:15px 0;color:#0f172a;}
+.price span{font-size:14px;color:#64748b;}
+.card ul{list-style:none;margin:15px 0;}
+.card ul li{margin:8px 0;font-size:14px;}
+.cta{width:100%;padding:10px;background:#0f172a;color:white;border:none;border-radius:6px;cursor:pointer;transition:0.2s;}
+.cta:active{transform:scale(0.95);}
+.popular{border:2px solid #0ea5e9;transform:scale(1.05);}
+.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#0ea5e9;color:white;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;}
+
+@media(max-width:600px){.popular{transform:scale(1);}}

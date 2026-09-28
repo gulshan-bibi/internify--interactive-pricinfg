@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 2 - Pricing Cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Choose Your Plan</h1>
+
+<!-- Monthly / Yearly Toggle -->
+<div class="toggle-container">
+  <span>Monthly</span>
+  <label class="switch">
+    <input type="checkbox" id="billingToggle">
+    <span class="slider"></span>
+  </label>
+  <span>Yearly <small>(20% OFF)</small></span>
+</div>
+
+<!-- Category Filter -->
+<div class="filter-container">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="basic">Basic</button>
+  <button class="filter-btn" data-filter="premium">Premium</button>
+</div>
+
+<!-- Cards -->
+<div class="pricing-grid">
+
+  <div class="card" data-category="basic">
+    <h3>Basic</h3>
+    <p class="desc">Perfect for individuals</p>
+    <h2 class="price" data-monthly="19" data-yearly="190">$19<span>/mo</span></h2>
+    <ul>
+      <li>✔ 5 Projects</li>
+      <li>✔ 10GB Storage</li>
+      <li>✔ Basic Support</li>
+    </ul>
+    <button class="cta">Get Started</button>
+  </div>
+
+  <div class="card popular" data-category="premium">
+    <div class="badge">Most Popular</div>
+    <h3>Pro</h3>
+    <p class="desc">Best for growing teams</p>
+    <h2 class="price" data-monthly="49" data-yearly="490">$49<span>/mo</span></h2>
+    <ul>
+      <li>✔ 50 Projects</li>
+      <li>✔ 100GB Storage</li>
+      <li>✔ Priority Support</li>
+      <li>✔ Advanced Analytics</li>
+    </ul>
+    <button class="cta">Get Started</button>
+  </div>
+
+  <div class="card" data-category="premium">
+    <h3>Enterprise</h3>
+    <p class="desc">For large companies</p>
+    <h2 class="price" data-monthly="99" data-yearly="990">$99<span>/mo</span></h2>
+    <ul>
+      <li>✔ Unlimited Projects</li>
+      <li>✔ 1TB Storage</li>
+      <li>✔ 24/7 Support</li>
+      <li>✔ Custom Solutions</li>
+    </ul>
+    <button class="cta">Get Started</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
